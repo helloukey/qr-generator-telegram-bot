@@ -5,7 +5,8 @@
   "main": "./public/index.js",
   "scripts": {
     "build": "tsc",
-    "start": "node ./public/index.js"
+    "start": "node ./public/index.js",
+    "dev": "nodemon ./public/index.js"
   },
   "keywords": [],
   "author": "",
