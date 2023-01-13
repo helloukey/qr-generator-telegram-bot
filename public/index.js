@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
 const telegraf_1 = require("telegraf");
+const https = require("https");
 const TOKEN = process.env.TOKEN;
 const bot = new telegraf_1.Telegraf(TOKEN);
 // Help message
@@ -25,8 +26,10 @@ let text = "";
 let size = "";
 // start command
 bot.start((ctx) => {
-    ctx.telegram.sendMessage(ctx.chat.id, message, {
-        parse_mode: "HTML",
+    https.get("https://red-determined-goldfish.cyclic.app/", () => {
+        ctx.telegram.sendMessage(ctx.chat.id, message, {
+            parse_mode: "HTML",
+        });
     });
 });
 // help command
