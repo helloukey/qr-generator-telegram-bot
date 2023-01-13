@@ -4,7 +4,8 @@
   "description": "",
   "main": "./public/index.js",
   "scripts": {
-    "serve": "node ./public/index.js"
+    "build": "tsc",
+    "start": "node ./public/index.js"
   },
   "keywords": [],
   "author": "",
