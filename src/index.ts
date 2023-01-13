@@ -1,7 +1,6 @@
 import dotenv from "dotenv";
 dotenv.config();
 import { Telegraf } from "telegraf";
-const https = require("https");
 
 const TOKEN = process.env.TOKEN!;
 const bot = new Telegraf(TOKEN);
@@ -26,10 +25,8 @@ let size: string = "";
 
 // start command
 bot.start((ctx) => {
-  https.get("https://red-determined-goldfish.cyclic.app/", () => {
-    ctx.telegram.sendMessage(ctx.chat.id, message, {
-      parse_mode: "HTML",
-    });
+  ctx.telegram.sendMessage(ctx.chat.id, message, {
+    parse_mode: "HTML",
   });
 });
 
