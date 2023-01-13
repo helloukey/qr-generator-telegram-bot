@@ -1,0 +1,21 @@
+{
+  "name": "qr-generator-telegram-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./public/index.js",
+  "scripts": {
+    "start": "node ./public/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "nodemon": "^2.0.20",
+    "telegraf": "^4.11.2"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/node": "^18.11.18"
+  }
+}
